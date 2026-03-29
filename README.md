@@ -2,13 +2,13 @@
 
 > 数据分析（商业分析 / 增长分析）｜广州、深圳｜2025.07 毕业｜可随时到岗
 
-擅长 **指标口径校验、实验评估与经营诊断**，能基于 `SQL / Python` 完成 **用户分层、预算优化和治理优先级分析**。
+擅长 **指标口径校验、实验评估与经营诊断**，能基于 `SQL / Python` 完成 **用户分层、预算优化和治理优先级分析**，并用 **Tableau 决策看板** 支持策略沟通。
 
-[简历 PDF](./姚念铭的简历.pdf) | [GitHub](https://github.com/CLampard-Y) | [联系我](mailto:nianmingyao.math@outlook.com)
+[简历 PDF](./姚念铭的简历.pdf) | [项目 1 Tableau 入口](https://github.com/CLampard-Y/causal-uplift-marketing/blob/main/dashboard/README.md) | [GitHub](https://github.com/CLampard-Y) | [联系我](mailto:nianmingyao.math@outlook.com)
 
 ## 如果你只看 10 秒
 
-- `增长分析 / 实验评估（离线策略模拟）`：基于 `64,000` 用户 Hillstrom RCT，将平均实验结论转成预算内 top-K 投放优先级；top `25%` 用户 `ROI proxy 2.08x`、预算 `-75%`、保留 `51.9%` 增量转化
+- `增长分析 / 实验评估 / Tableau 决策交付`：基于 `64,000` 用户 Hillstrom RCT，将平均实验结论转成预算内 top-K 投放优先级；top `25%` 用户 `ROI proxy 2.08x`、预算 `-75%`、保留 `51.9%` 增量转化，并沉淀为 `Decision Desk / Evidence Desk` 两页看板
 - `经营诊断 / 治理优先级（描述性证据）`：按 `订单 / 商品 / 用户` 三层粒度固化指标口径；评价覆盖率 `99.33%`，延迟从轻微到严重时评分中位数 `4 -> 1`，并将 `611` 个活跃卖家收敛至 `58` 个重点治理对象
 - `分析基础设施 / 稳定供数（主备演示验证）`：设计 Airflow 跨区主备数据管道，已完成 `HK -> JP` 自动接管演示，支持幂等入库、来源追溯与 parquet 快照导出
 
@@ -16,7 +16,7 @@
 
 ## 快速导航
 
-- `HR / 招聘经理`：先看 [项目速览](#project-overview) + [核心能力](#skills) + [联系方式](#contact)
+- `HR / 招聘经理`：先看 [项目速览](#project-overview) + [项目 1](#project-1) + [联系方式](#contact)
 - `业务面试官`：重点看 [项目 1](#project-1) + [项目 2](#project-2)
 - `技术面试官`：重点看 [核心能力](#skills) + [项目 1](#project-1) + [项目 3](#project-3)
 
@@ -24,10 +24,11 @@
 
 ## 核心能力
 
-- `SQL / Python`：PostgreSQL、CTE、JOIN、窗口函数、指标建模；pandas、numpy、scikit-learn、xgboost、SQLAlchemy
-- `分析能力`：指标口径校验、实验评估、用户分层、增长分析、履约/留存分析、经营诊断、卖家治理
-- `数据与工程`：Excel、ELT、OBT、DQ Gates、Airflow、Docker、Git、JupyterLab、运行检查、数据导出
-- `项目映射`：项目 1 聚焦实验评估与预算优化；项目 2 聚焦经营诊断与治理优先级；项目 3 聚焦分析基础设施与稳定供数
+- `分析与业务`：指标口径校验、实验评估 / A/B Testing、经营诊断、用户分层、预算优化、治理优先级分析
+- `SQL / Python`：PostgreSQL、CTE、JOIN、窗口函数、指标建模；pandas、scikit-learn、xgboost
+- `可视化交付`：Tableau（决策看板）、Excel
+- `数据与工程基础`：ELT、OBT、DQ Gates、Airflow、Docker、Git、JupyterLab、运行检查、数据导出
+- `项目映射`：项目 1 聚焦实验评估、预算优化与 Tableau 决策交付；项目 2 聚焦经营诊断与治理优先级；项目 3 聚焦分析基础设施与稳定供数
 
 <a id="project-overview"></a>
 
@@ -36,9 +37,10 @@
 ### 1) 因果增量营销优化策略（Hillstrom RCT）
 
 - `业务问题`：在“全量触达 vs 预算内定向触达”之间，确定预算该优先给谁
-- `我的动作`：基于 `64,000` 用户 RCT，搭建 **实验评估 -> 增量排序 -> 名单输出 -> 策略执行** 链路
+- `我的动作`：基于 `64,000` 用户 RCT，搭建 **实验评估 -> 增量排序 -> 名单输出 -> Tableau 决策看板 -> 策略沟通** 链路
+- `交付形式`：`Decision Desk` 面向“预算有限时应该优先投给谁”，`Evidence Desk` 面向“为什么相信这条 recommendation”
 - `结果速览`：top `25%` 用户离线策略模拟下 `ROI proxy 2.08x`、预算 `-75%`、保留 `51.9%` 增量转化
-- `主入口`：[Case Study](https://github.com/CLampard-Y/causal-uplift-marketing/blob/main/docs/case_study_one_pager.md) | [Repo](https://github.com/CLampard-Y/causal-uplift-marketing) | [README](https://github.com/CLampard-Y/causal-uplift-marketing/blob/main/README.md)
+- `主入口`：[Dashboard README](https://github.com/CLampard-Y/causal-uplift-marketing/blob/main/dashboard/README.md) | [Decision Desk](https://github.com/CLampard-Y/causal-uplift-marketing/blob/main/dashboard/Decision%20Desk.png) | [Evidence Desk](https://github.com/CLampard-Y/causal-uplift-marketing/blob/main/dashboard/Evidence%20Desk.png) | [Case Study](https://github.com/CLampard-Y/causal-uplift-marketing/blob/main/docs/case_study_one_pager.md) | [Repo](https://github.com/CLampard-Y/causal-uplift-marketing)
 
 ### 2) 电商增长分析与卖家治理项目（Olist）
 
@@ -60,14 +62,15 @@
 
 ### 项目定位
 
-围绕“**全量触达 vs 预算内定向触达**”，把平均 A/B 结论进一步翻译成 **用户级投放优先级**，回答预算该优先给谁。
+围绕“**全量触达 vs 预算内定向触达**”，把平均 A/B 结论进一步翻译成 **用户级投放优先级**，并最终压缩成面向业务方可直接浏览的 **Tableau 决策看板**。
 
 ### 核心动作
 
-- 基于 `64,000` 用户 Hillstrom RCT，搭建 **实验评估 -> 增量排序 -> 名单输出 -> 策略执行** 的完整链路
+- 基于 `64,000` 用户 Hillstrom RCT，搭建 **实验评估 -> 增量排序 -> 名单输出 -> Tableau 决策交付** 的完整链路
 - 审计实验分组与特征口径，排除后置变量，并做可比性与稳健性检查，降低将随机波动误判为投放机会的风险
 - 对比多种 uplift / CATE 排序方案，选择最优模型，并用 SQL 将结果转化为预算内 top-K 名单与用户分层
 - 将模型输出落到 `top 25%` 用户 / `Persuadables only` 的离线策略模拟，而不是停在模型分数比较
+- 用 `Decision Desk` 回答“预算有限时应该优先投给谁”，用 `Evidence Desk` 回答“为什么相信这个 recommendation”，把分析结果翻译成业务可读的策略沟通材料
 
 ### 已验证结果
 
@@ -77,21 +80,31 @@
 - `排序结果`：`X-Learner` 为当前最优 uplift learner，默认策略落在 `Persuadables only` / top `25%` 用户
 - `策略输出`：离线策略模拟下 **ROI proxy `2.08x`**、**预算 `-75%`**、**保留 `51.9%` 增量转化**
 
+### 交付形态
+
+- `Decision Desk`：把 `Persuadables only` 推荐动作、预算节省与 ROI proxy 压成一页高管摘要
+- `Evidence Desk`：把实验基线、PSM 证据、Qini 排序能力与 placebo 边界压成一页证据台
+- `交付价值`：让项目不只停在 notebook / SQL / 模型报告，而能直接作为业务讨论与面试 walkthrough 的可视化交付件
+
 ### 核心竞争力
 
 - 我能把 **平均实验结论** 往前推进到 **用户级投放优先级**
 - 我不会只报模型分数，而会主动回答 **这个结果如何影响预算配置和业务动作**
-- 我能在分析叙事里同时兼顾 **方法可信度** 和 **商业可读性**
+- 我能把 notebook / SQL / 模型结果压成业务可浏览的 **Tableau 决策台**，同时保留证据边界与 caveat
 
 ### 查看这个项目
 
 - [Case Study](https://github.com/CLampard-Y/causal-uplift-marketing/blob/main/docs/case_study_one_pager.md)
+- [Dashboard README](https://github.com/CLampard-Y/causal-uplift-marketing/blob/main/dashboard/README.md)
+- [Decision Desk](https://github.com/CLampard-Y/causal-uplift-marketing/blob/main/dashboard/Decision%20Desk.png)
+- [Evidence Desk](https://github.com/CLampard-Y/causal-uplift-marketing/blob/main/dashboard/Evidence%20Desk.png)
 - [Repo](https://github.com/CLampard-Y/causal-uplift-marketing)
 - [README](https://github.com/CLampard-Y/causal-uplift-marketing/blob/main/README.md)
 
 ### 结果边界
 
 - 以上 `ROI proxy 2.08x`、`预算 -75%`、`保留 51.9% 增量转化` 均来自 **离线策略模拟**，用于比较策略优先级，不等同于真实线上财务结果
+- Tableau 看板属于 **策略沟通与结果交付层**，不新增额外识别证据；关键证据仍以 notebook、phase report 与 case study 为准
 
 <a id="project-2"></a>
 
@@ -177,6 +190,7 @@
 ## 联系方式
 
 - `简历 PDF`：[姚念铭的简历.pdf](./姚念铭的简历.pdf)
+- `项目 1 Tableau 入口`：[Hillstrom Dashboard README](https://github.com/CLampard-Y/causal-uplift-marketing/blob/main/dashboard/README.md)
 - `项目主页`：[data-analysis-portfolio](https://github.com/CLampard-Y/data-analysis-portfolio)
 - `GitHub`：[CLampard-Y](https://github.com/CLampard-Y)
 - `Email`：[nianmingyao.math@outlook.com](mailto:nianmingyao.math@outlook.com)
